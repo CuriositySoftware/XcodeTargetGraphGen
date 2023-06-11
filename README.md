@@ -1,5 +1,3 @@
 # XcodeTargetGraphGen
 
-XcodeTargetGraphGen is an open-source tool that helps you visualize the internal dependencies of your Xcode projects. It takes an .xcodeproj file and generates a dependency graph using the Mermaid diagram syntax. This can be incredibly useful for understanding the structure and dependencies of large and complex Xcode projects.
-
-                                                                                                                                                                                                                                                        
+XcodeTargetGraphGen is a Swift command line tool that analyzes .xcodeproj files to generate a visualization of module-level internal dependencies using Mermaid diagram syntax. It supports multiple package managers, providing a clear representation of the structure and dependencies in Xcode projects across various environments. This facilitates a deeper understanding of the organization of modules in complex projects.                                                                                                                                                                                            

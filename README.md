@@ -3,7 +3,7 @@
 ![Swift Package Manager](https://img.shields.io/badge/swift%20package%20manager-compatible-brightgreen.svg)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-XcodeTargetGraphGen is a Swift command line tool that analyzes `.xcodeproj` files to generate a visualization of module-level internal dependencies using Mermaid diagram syntax. It supports multiple package managers, providing a clear representation of the structure and dependencies in Xcode projects across various environments. This facilitates a deeper understanding of the organization of modules in complex projects.
+XcodeTargetGraphGen is a Swift command-line tool that interprets `.xcodeproj` files to create a visual depiction of module-level internal dependencies using Mermaid diagram syntax. By supporting multiple package managers, it enables users to visually map out the structure and dependencies of Xcode projects across various environments, providing a clear and comprehensible graphical representation of these relationships.
 
 The supported package managers are as follows:
 

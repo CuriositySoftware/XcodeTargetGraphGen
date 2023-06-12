@@ -27,7 +27,7 @@ public struct Generator {
         let project = ProjectMaker().makeProject(from: xcodeProj)
 
         console.log("🧜 Generating graph in Mermaid syntax ...")
-        let text = MermaidFormatter().format(
+        let mermaidMarkdown = MermaidFormatter().format(
             with: project,
             mermaidTheme: mermaidTheme,
             syntaxType: .init(
@@ -43,12 +43,12 @@ public struct Generator {
 
         console.log("📄 Starting to create file at \(Path(outputFilePath).absolute()) ...")
         if !dryRun {
-            try FileOutputClient.live.write(text, Path(outputFilePath).url)
+            try FileOutputClient.live.write(mermaidMarkdown, Path(outputFilePath).url)
         }
 
         console.log("✅ Created")
 
-        console.log(text)
+        console.log(mermaidMarkdown)
     }
 
     public init() {}

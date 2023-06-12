@@ -1,7 +1,6 @@
 import SwiftUI
 import CoreGraphics
 import MapKit
-import Utility
 
 struct ContentView: View {
     var body: some View {
@@ -10,7 +9,6 @@ struct ContentView: View {
         }
         .padding()
         .onAppear {
-            print(Echo.run(number: 1))
         }
     }
 }

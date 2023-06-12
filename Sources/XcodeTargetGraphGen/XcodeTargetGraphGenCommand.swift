@@ -33,7 +33,7 @@ struct XcodeTargetGraphGenCommand: ParsableCommand {
         inversion: FlagInversion.prefixedEnableDisable,
         help: "Targeting Swift Package Product for output."
     )
-    var swiftPackageOutput = false
+    var swiftPackageOutput = true
 
     @Flag(
         inversion: FlagInversion.prefixedEnableDisable,

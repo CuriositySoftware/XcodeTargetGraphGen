@@ -66,7 +66,7 @@ OPTIONS:
 
 # Examples
 
-```
+```bash
 swift run -c release xcgraphgen ./SampleiOSApp/SampleiOSApp.xcodeproj/
 ```
 

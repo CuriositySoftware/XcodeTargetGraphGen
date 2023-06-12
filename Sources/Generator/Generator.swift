@@ -42,13 +42,13 @@ public struct Generator {
         )
 
         console.log("📄 Starting to create file at \(Path(outputFilePath).absolute()) ...")
-        if dryRun {
-            console.log(text)
-        } else {
+        if !dryRun {
             try FileOutputClient.live.write(text, Path(outputFilePath).url)
         }
 
         console.log("✅ Created")
+
+        console.log(text)
     }
 
     public init() {}

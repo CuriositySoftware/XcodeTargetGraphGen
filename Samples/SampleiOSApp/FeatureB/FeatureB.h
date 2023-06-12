@@ -1,10 +1,3 @@
-//
-//  FeatureB.h
-//  FeatureB
-//
-//  Created by Yoshinori Imajo on 2023/06/12.
-//
-
 #import <Foundation/Foundation.h>
 
 //! Project version number for FeatureB.

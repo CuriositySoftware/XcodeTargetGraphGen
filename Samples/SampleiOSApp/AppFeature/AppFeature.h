@@ -1,10 +1,3 @@
-//
-//  AppFeature.h
-//  AppFeature
-//
-//  Created by Yoshinori Imajo on 2023/06/12.
-//
-
 #import <Foundation/Foundation.h>
 
 //! Project version number for AppFeature.

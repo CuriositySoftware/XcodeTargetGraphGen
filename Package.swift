@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "XcodeTargetGraphGen",
     platforms: [
-        .macOS(.v13)
+        .macOS(.v12)
     ],
     products: [
         .executable(name: "xcgraphgen", targets: ["XcodeTargetGraphGen"])

@@ -1,32 +1,21 @@
-# Uncomment the next line to define a global platform for your project
-platform :ios, '16.4'
-
-target 'APIClient' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for APIClient
-
-end
-
-target 'MyEmbedFramework' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
-
-  pod 'SDWebImage'
-
-  target 'MyEmbedFrameworkTests' do
-    # Pods for testing
-  end
-
-end
+platform :ios, '16.3'
 
 target 'SampleiOSApp' do
-  # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
   # Pods for SampleiOSApp
+
+  # NOTE:
+  # CocoaPods will not deploy libraries unless pods are specified on the host target side.
+  # CocoaPods deploys modules only by loading pods on the host target side.
+  # You can choose whether or not to load the pod on the submodule side.
+  # In other words, it is not possible to load pods only in submodules.
   pod 'SDWebImage'
+
+  target 'FeatureA' do
+    use_frameworks!
+    pod 'SDWebImage'
+  end
 
   target 'SampleiOSAppTests' do
     inherit! :search_paths

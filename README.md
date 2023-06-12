@@ -64,6 +64,46 @@ OPTIONS:
   -h, --help              Show help information.
 ```
 
+# Examples
+
+```
+swift run -c release xcgraphgen ./SampleiOSApp/SampleiOSApp.xcodeproj/
+```
+
+```mermaid
+%%{init: {'theme':'dark'}}%%
+flowchart TD
+style SampleiOSApp stroke-width:4px
+subgraph Swift Package
+Algorithms["Algorithms"]
+end
+subgraph Swift Package Local
+Utility["Utility"]
+end
+subgraph Carthage
+APIKit.xcframework["APIKit.xcframework"]
+end
+subgraph Native Target
+APIClient["APIClient"]
+AppFeature["AppFeature"]
+FeatureA["FeatureA"]
+FeatureB["FeatureB"]
+SampleiOSApp["SampleiOSApp"]
+SampleiOSAppTests["SampleiOSAppTests"]
+SampleiOSAppUITests["SampleiOSAppUITests"]
+end
+FeatureB --> APIClient
+FeatureB --> Algorithms
+AppFeature --> FeatureA
+AppFeature --> FeatureB
+SampleiOSAppTests --> SampleiOSApp
+SampleiOSAppUITests --> SampleiOSApp
+FeatureA --> APIClient
+SampleiOSApp --> AppFeature
+APIClient --> Utility
+APIClient --> APIKit.xcframework
+```
+
 # Other libraries
 
 The Swift and iOS communities have other tools for Xcode that have different priorities and tradeoffs than XcodeTargetGraphGen.

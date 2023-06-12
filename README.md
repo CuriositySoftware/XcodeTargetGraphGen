@@ -1,6 +1,8 @@
 ![](Logo/png/logo.png)
 
+![version](https://img.shields.io/github/v/release/CuriositySoftware/XcodeTargetGraphGen.svg)
 ![Swift Package Manager](https://img.shields.io/badge/swift%20package%20manager-compatible-brightgreen.svg)
+[![Build](https://github.com/CuriositySoftware/XcodeTargetGraphGen/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/CuriositySoftware/XcodeTargetGraphGen/actions/workflows/build-and-test.yml)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 # What is this?

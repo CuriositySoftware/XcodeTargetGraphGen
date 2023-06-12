@@ -63,3 +63,9 @@ OPTIONS:
   --version               Show the version.
   -h, --help              Show help information.
 ```
+
+# Other libraries
+
+The Swift and iOS communities have other tools for Xcode that have different priorities and tradeoffs than XcodeTargetGraphGen.
+
+- [swift-dependencies-graph](https://github.com/Ryu0118/swift-dependencies-graph)

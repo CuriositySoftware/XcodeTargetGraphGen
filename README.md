@@ -3,6 +3,8 @@
 ![version](https://img.shields.io/github/v/release/CuriositySoftware/XcodeTargetGraphGen.svg)
 ![Swift Package Manager](https://img.shields.io/badge/swift%20package%20manager-compatible-brightgreen.svg)
 [![Build](https://github.com/CuriositySoftware/XcodeTargetGraphGen/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/CuriositySoftware/XcodeTargetGraphGen/actions/workflows/build-and-test.yml)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FCuriositySoftware%2FXcodeTargetGraphGen%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/CuriositySoftware/XcodeTargetGraphGen)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FCuriositySoftware%2FXcodeTargetGraphGen%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/CuriositySoftware/XcodeTargetGraphGen)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 # What is this?

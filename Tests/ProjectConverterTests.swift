@@ -7,17 +7,20 @@ final class ProjectConverterTests: XCTestCase {
 
     func testReduce() {
         let packageProductA = Project.SwiftPackage(
-            id: "A", name: "A", type: .remote(urlString: "")
+            id: "A", name: "A", packageName: "A", type: .remote(urlString: "")
         )
-        let packageProductB = Project.SwiftPackage(
-            id: "B", name: "B", type: .remote(urlString: "")
+        let packageProductB1 = Project.SwiftPackage(
+            id: "B1", name: "B1", packageName: "B", type: .remote(urlString: "")
+        )
+        let packageProductB2 = Project.SwiftPackage(
+            id: "B2", name: "B2", packageName: "B", type: .remote(urlString: "")
         )
 
         let internalPackageProduct1 = Project.SwiftPackage(
-            id: "P1", name: "InternalProduct1", type: .local
+            id: "P1", name: "InternalProduct1", packageName: nil, type: .local
         )
         let internalPackageProduct2 = Project.SwiftPackage(
-            id: "P2", name: "InternalProduct2", type: .local
+            id: "P2", name: "InternalProduct2", packageName: nil, type: .local
         )
 
         let appleSDKあ = Project.Framework(
@@ -64,7 +67,8 @@ final class ProjectConverterTests: XCTestCase {
                     ],
                     packageProductDependencies: [
                         packageProductA,
-                        packageProductB,
+                        packageProductB1,
+                        packageProductB2,
                         internalPackageProduct1,
                         internalPackageProduct2
                     ],
@@ -91,7 +95,7 @@ final class ProjectConverterTests: XCTestCase {
 
         XCTAssertEqual(
             subject.packageProducts,
-            [packageProductA, packageProductB]
+            [packageProductA, packageProductB1, packageProductB2]
         )
 
         XCTAssertEqual(

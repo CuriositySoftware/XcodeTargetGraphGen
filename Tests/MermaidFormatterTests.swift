@@ -18,7 +18,10 @@ final class MermaidFormatterTests: XCTestCase {
                 .init(
                     id: "ShareExtension",
                     name: "ShareExtension",
-                    targetDependencies: [.init(id: "B", name: "Core")],
+                    targetDependencies: [
+                        .init(id: "B", name: "Core"),
+                        .init(id: "C", name: "LibraryC")
+                    ],
                     packageProductDependencies: [],
                     otherDependencies: []
                 )
@@ -43,6 +46,7 @@ final class MermaidFormatterTests: XCTestCase {
             end
             App --> Core
             ShareExtension --> Core
+            ShareExtension --> LibraryC
             ```
 
             """

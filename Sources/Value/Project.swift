@@ -90,15 +90,18 @@ public struct Project {
 
         public var id: String
         public let name: String
+        public let packageName: String?
         public let type: DependencyType
 
         public init(
             id: String,
             name: String,
+            packageName: String?,
             type: DependencyType
         ) {
             self.id = id
             self.name = name
+            self.packageName = packageName
             self.type = type
         }
     }

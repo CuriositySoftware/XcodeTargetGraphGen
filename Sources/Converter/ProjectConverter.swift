@@ -25,9 +25,17 @@ public struct ProjectConverter {
             nativeTarget.packageProductDependencies.forEach { dependency in
                 switch dependency.type {
                 case .remote:
-                    accumulators.0.append(dependency)
+                    if !accumulators.0.contains(where: {
+                        $0.name == dependency.name
+                    }) {
+                        accumulators.0.append(dependency)
+                    }
                 case .local:
-                    accumulators.1.append(dependency)
+                    if !accumulators.1.contains(where: {
+                        $0.name == dependency.name
+                    }) {
+                        accumulators.1.append(dependency)
+                    }
                 }
             }
 

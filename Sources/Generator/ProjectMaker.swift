@@ -40,8 +40,9 @@ struct ProjectMaker {
                             $0.packageProductDependencies.map {
                                 if let package = $0.package, let urlString = package.repositoryURL {
                                     return .init(
-                                        id: package.uuid,
+                                        id: $0.uuid,
                                         name: $0.productName,
+                                        packageName: package.name,
                                         type: .remote(
                                             urlString: urlString
                                         )
@@ -50,6 +51,7 @@ struct ProjectMaker {
                                     return .init(
                                         id: $0.uuid,
                                         name: $0.productName,
+                                        packageName: nil,
                                         type: .local
                                     )
                                 }

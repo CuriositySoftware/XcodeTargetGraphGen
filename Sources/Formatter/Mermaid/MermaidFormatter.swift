@@ -117,13 +117,19 @@ public struct MermaidFormatter {
 
         let formatNodeEdge = NodeEdgeFormatter()
 
-        project.nativeTargets.forEach { native in
-            result += native.targetDependencies.reduce("") { result, connectedNode in
+        project.nativeTargets
+            .sorted( by: { $0.name < $1.name } )
+            .forEach { native in
+            result += native.targetDependencies
+                .sorted(by: { $0.name < $1.name })
+                .reduce("") { result, connectedNode in
                 result + formatNodeEdge(node: native.name, connectedNode: connectedNode.name)
             }
 
             if swiftPackageOutput {
-                result += native.packageProductDependencies.reduce("") { result, connectedNode in
+                result += native.packageProductDependencies
+                    .sorted(by: { $0.name < $1.name })
+                    .reduce("") { result, connectedNode in
                     result + formatNodeEdge(node: native.name, connectedNode: connectedNode.name)
                 }
             }
@@ -143,6 +149,7 @@ public struct MermaidFormatter {
                     return vendorOutput
                 }
             }
+            .sorted(by: { $0.name < $1.name })
             .reduce("") { result, connectedNode in
                 result + formatNodeEdge(node: native.name, connectedNode: connectedNode.name)
             }

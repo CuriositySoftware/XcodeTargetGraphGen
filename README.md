@@ -73,7 +73,7 @@ OPTIONS:
 # Examples
 
 ```bash
-swift run -c release xcgraphgen ./SampleiOSApp/SampleiOSApp.xcodeproj/
+swift run -c release xcgraphgen ./Samples/SampleiOSApp/SampleiOSApp.xcodeproj/
 ```
 
 ```mermaid
